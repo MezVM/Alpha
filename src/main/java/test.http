@@ -1,0 +1,32 @@
+###
+GET {{aem}}/uwfapi/v1/content.json/de-DE/80fd126b-62d1-4654-992b-a3a4ead32c12
+Authorization: Basic {{aem-user}} {{aem-pass}}
+
+### Create Brand
+POST {{aem}}/uwfapi/v1/content.json
+Content-Type: application/json
+Authorization: Basic {{aem-user}} {{aem-pass}}
+Accept: application/json
+
+{
+  "title": "RGL Brand",
+  "viacom:contentType": "brand",
+  "viacom:originCountry": "US",
+  "viacom:originLanguage": "en",
+  "viacom:vmid": "rgl-brand-1"
+}
+
+### Create franchise
+POST {{aem}}/uwfapi/v1/content
+Content-Type: application/json
+Authorization: Basic {{aem-user}} {{aem-pass}}
+Accept: application/json
+
+{
+  "viacom:contentType": "franchise",
+  "viacom:vmid": "rgl-franchise-1233",
+  "viacom:originLanguage": "pl-PL",
+  "title": "RGL Franchise test 1",
+  "jcr:description": "JCR description"
+}
+##
