@@ -1,3 +1,16 @@
+
+GET https://httpbin.org/basic-auth/user/passwd
+Authorization: Basic {{username}} {{password}}
+
+###
+GET https://httpbin.org/status/200
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+%}
+
 ###
 GET {{aem}}/uwfapi/v1/content.json/de-DE/80fd126b-62d1-4654-992b-a3a4ead32c12
 Authorization: Basic {{aem-user}} {{aem-pass}}
